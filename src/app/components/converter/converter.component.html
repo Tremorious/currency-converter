@@ -1,0 +1,20 @@
+<div class="converter">
+    <h3 class="converter__title">Currency Converter</h3>
+    <div class="converter__form">
+        <app-currency-input
+            (triggerValues)="setStateFromFirstInput($event)"
+            [initialSelectValue]="state$.value.currency"
+            [initialInputValue]="state$.value.amount"
+            [title]="'From'"
+        ></app-currency-input>
+
+        <div class="converter__icon">&#x2193;&#x2191;</div>
+
+        <app-currency-input
+            (triggerValues)="setStateFromSecondInput($event)"
+            [initialSelectValue]="state2$.value.currency"
+            [initialInputValue]="state2$.value.amount"
+            [title]="'To'"
+        ></app-currency-input>
+    </div>
+</div>

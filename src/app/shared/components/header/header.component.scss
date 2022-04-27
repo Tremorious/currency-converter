@@ -1,0 +1,37 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 40px;
+        height: 30px;
+        margin: 0px 10px;
+    }
+    &__change-rate {
+        display: flex;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        &__arrow {
+            font-size: 30px;
+        }
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+
+    justify-content: space-between;
+}

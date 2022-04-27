@@ -1,0 +1,14 @@
+<span>{{ title }}</span>
+<form class="converter-input" action="#" [formGroup]="inputForm">
+    <input class="converter-input__amount" #input [value]="initialInputValue" formControlName="amount" type="number" />
+
+    <div class="converter-input__currency">
+        <img [src]="src" [alt]="initialSelectValue" width="40" />
+        <select name="currency" formControlName="currency">
+            <option *ngFor="let rate of rates" [value]="rate">
+                {{ rate }}
+            </option>
+            <option selected [value]="initialSelectValue">{{ initialSelectValue }}</option>
+        </select>
+    </div>
+</form>
