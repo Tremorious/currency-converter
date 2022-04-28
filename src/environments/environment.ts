@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    api_url: `https://v6.exchangerate-api.com/v6/45dedc58af91d70ddc1f4659`
+    api_url: `https://v6.exchangerate-api.com/v6/fcf36336d0d20c93ca1e432b`
 };
 
 /*
