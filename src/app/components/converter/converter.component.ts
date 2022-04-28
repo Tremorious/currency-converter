@@ -35,7 +35,7 @@ export class ConverterComponent implements OnInit {
     private firstInputSubscription() {
         this._state$
             .pipe(
-                debounceTime(1000),
+                debounceTime(200),
                 //Backspace clear input case
                 map((_state$) => {
                     if (_state$.amount === '') {
@@ -69,7 +69,7 @@ export class ConverterComponent implements OnInit {
     private secondInputSubscription() {
         this._state2$
             .pipe(
-                debounceTime(1000),
+                debounceTime(200),
                 //Backspace clear input case
                 map((_state2$) => {
                     if (_state2$.amount === '') {
