@@ -51,7 +51,8 @@ export class ConverterComponent implements OnInit {
                         _state$.amount !== null &&
                         _state$.currency !== null &&
                         _state$.currency !== '' &&
-                        _state$.amount !== ''
+                        _state$.amount !== '' &&
+                        _state$.amount !== '0'
                 ),
                 switchMap((_state$) =>
                     this.converterService.getExchangeResult(
@@ -85,7 +86,8 @@ export class ConverterComponent implements OnInit {
                         _state2$.amount !== null &&
                         _state2$.currency !== null &&
                         _state2$.currency !== '' &&
-                        _state2$.amount !== ''
+                        _state2$.amount !== '' &&
+                        _state2$.amount !== '0'
                 ),
                 switchMap((_state2$) =>
                     this.converterService.getExchangeResult(

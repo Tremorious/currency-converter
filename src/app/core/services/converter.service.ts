@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { PairExchange } from '../models/PairExchangeModel';
-import { catchError, map, Observable, throwError } from 'rxjs';
+import { catchError, map, Observable, of, throwError } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -17,7 +17,6 @@ export class ConverterService {
     }
 
     getExchangeResult(first: string, second: string, amount: number | string | null): Observable<string> {
-        console.log(amount, first, second);
         return this.http.get<PairExchange>(`${environment.api_url}/pair/${first}/${second}/${amount}`).pipe(
             map((res) => `${res.conversion_result.toFixed(2)}`),
             catchError(this.formatErrors)
