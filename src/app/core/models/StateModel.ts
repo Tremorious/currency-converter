@@ -1,4 +1,4 @@
 export interface State {
-    amount: string | number | null;
+    amount: string | null;
     currency: string;
 }

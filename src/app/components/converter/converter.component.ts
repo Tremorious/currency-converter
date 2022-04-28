@@ -113,5 +113,4 @@ export class ConverterComponent implements OnInit {
             currency: data.currency
         });
     }
-
 }

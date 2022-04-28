@@ -1,5 +1,5 @@
 import { rates } from './../../core/services/rates';
-import { Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { map } from 'rxjs/operators';
 import { State } from 'src/app/core/models/StateModel';
@@ -11,13 +11,13 @@ import { State } from 'src/app/core/models/StateModel';
 })
 export class CurrencyInputComponent implements OnInit {
     @Input() initialSelectValue: string;
-    @Input() initialInputValue: number | string | null;
+    @Input() initialInputValue: string | number | null;
     @Input() title: string;
 
-    rates: string[] = Object.keys(rates);
     @Output() triggerValues = new EventEmitter<State>();
-
     @ViewChild('input') input: ElementRef;
+
+    public rates: string[] = Object.keys(rates);
     public inputForm: FormGroup;
     public src: string;
 

@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-    euroToUahChangeRate$: Observable<number>;
-    usdToUahChangeRate$: Observable<number>;
+    euroToUahChangeRate$: Observable<string>;
+    usdToUahChangeRate$: Observable<string>;
     constructor(private converterService: ConverterService) {}
 
     ngOnInit(): void {

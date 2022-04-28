@@ -11,9 +11,9 @@ import { map, Observable } from 'rxjs';
 export class ConverterService {
     constructor(private http: HttpClient) {}
 
-    getExchangeResult(first: any, second: any, amount: number | string | null): Observable<number> {
+    getExchangeResult(first: string, second: string, amount: number | string | null): Observable<string> {
         return this.http
             .get<PairExchange>(`${environment.api_url}/pair/${first}/${second}/${amount}`)
-            .pipe(map((res) => res.conversion_result));
+            .pipe(map((res) => `${res.conversion_result}`));
     }
 }
